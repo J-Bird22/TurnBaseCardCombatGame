@@ -11,7 +11,9 @@ public class StabCard extends AttackCard
     //Attack Damage Of The STAB Card
     int Attack = 2;
     //Energy Cost Of The STAB Card
-    int Energy = 1;
+    int energyCost = 1;
+    //
+    BattleScreen world;
     //Resize The Card
     public StabCard ()
     {
@@ -29,7 +31,17 @@ public class StabCard extends AttackCard
      */
     public void act()
     {
-        
+        if (Greenfoot.mouseClicked(this))
+        {
+            if (world.energyBar.energy >= 1)
+            {
+                world.energyBar.decreaseEnergy(energyCost);
+                getWorld().removeObject(this);
+            }
+        }
     }
-    
+    protected void addedToWorld​(World world)
+    {
+        this.world = (BattleScreen)world;
+    }
 }

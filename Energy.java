@@ -10,8 +10,16 @@ public class Energy extends Actor
 
 {   
     //EnergyINT
-    int Energy = 3;
+    public int energy = 3;
     //Resize to make it fit on screen
+    GreenfootImage image0 = new GreenfootImage("C:/Users/moorej/Documents/GitHub/TurnBaseCardCombatGame/images/Energy 0.png");
+    GreenfootImage image1 = new GreenfootImage("C:/Users/moorej/Documents/GitHub/TurnBaseCardCombatGame/images/Energy 1.png");
+    GreenfootImage image2 = new GreenfootImage("C:/Users/moorej/Documents/GitHub/TurnBaseCardCombatGame/images/Energy 2.png");
+    GreenfootImage image3 = new GreenfootImage("C:/Users/moorej/Documents/GitHub/TurnBaseCardCombatGame/images/Energy 3.png");
+    public int level()
+    {
+        return energy;
+    }
     public Energy ()
     {
         this(100, 40);
@@ -29,19 +37,28 @@ public class Energy extends Actor
     public void act()
     {
         //Basic Change IMG Depedning On Amount Of "Energy"
-        if (Energy == 3)
+        if (energy == 3)
         {
-            
+            setImage(image3);
         }
         else 
-        if (Energy == 2)
+        if (energy == 2)
         {
-            
+            setImage(image2);
         }
         else 
-        if (Energy == 1)
+        if (energy == 1)
         {
-            
+            setImage(image1);
         }
+        else 
+        if (energy == 0)
+        {
+            setImage(image0);
+        }
+    }
+    public void decreaseEnergy(int amount)
+    {
+        energy = energy - amount;
     }
 }
