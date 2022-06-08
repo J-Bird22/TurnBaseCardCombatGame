@@ -20,6 +20,7 @@ public class BattleScreen extends World
         super(600, 400, 1); 
         prepare();
     }
+    
     /**
      * Prepare the world for the start of the program.
      * That is: create the initial objects and add them to the world.
@@ -30,7 +31,11 @@ public class BattleScreen extends World
         addObject(deck,233,365);
         StabCard stabCard = new StabCard();
         addObject(stabCard,27,365);
-        energyBar = new Energy(150, 70);
+        energyBar = new Energy();
         addObject(energyBar,570,370);
+        deck.setLocation(234,365);
+        HeavyShieldCard heavyShieldCard = new HeavyShieldCard(58, 66);
+        addObject(heavyShieldCard,78,368);
+    
     }
 }

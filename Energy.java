@@ -21,17 +21,6 @@ public class Energy extends Actor
     {
         return energy;
     }
-    //Resize The Energy Image
-    public Energy ()
-    {
-        this(100, 40);
-    }
-    public Energy(int width, int height)
-    {
-        GreenfootImage image = getImage();
-        image.scale(width, height);
-        setImage(image);
-    }
     /**
      * Act - do whatever the Energy wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
