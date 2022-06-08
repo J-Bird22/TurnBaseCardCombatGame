@@ -8,6 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class BattleScreen extends World
 {
+    //Allows Energy Bar To Be Used In Other Actors
     Energy energyBar;
     /**
      * Constructor for objects of class MyWorld.

@@ -11,15 +11,17 @@ public class Energy extends Actor
 {   
     //EnergyINT
     public int energy = 3;
-    //Resize to make it fit on screen
+    //Create The Images Showing How Much Energy The Player Has
     GreenfootImage image0 = new GreenfootImage("C:/Users/moorej/Documents/GitHub/TurnBaseCardCombatGame/images/Energy 0.png");
     GreenfootImage image1 = new GreenfootImage("C:/Users/moorej/Documents/GitHub/TurnBaseCardCombatGame/images/Energy 1.png");
     GreenfootImage image2 = new GreenfootImage("C:/Users/moorej/Documents/GitHub/TurnBaseCardCombatGame/images/Energy 2.png");
     GreenfootImage image3 = new GreenfootImage("C:/Users/moorej/Documents/GitHub/TurnBaseCardCombatGame/images/Energy 3.png");
+    //
     public int level()
     {
         return energy;
     }
+    //Resize The Energy Image
     public Energy ()
     {
         this(100, 40);
@@ -57,6 +59,7 @@ public class Energy extends Actor
             setImage(image0);
         }
     }
+    //Method For Card Actors To Decrease The Energy
     public void decreaseEnergy(int amount)
     {
         energy = energy - amount;

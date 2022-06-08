@@ -31,6 +31,8 @@ public class StabCard extends AttackCard
      */
     public void act()
     {
+        //Allowing The Player To Use The Card ONLY If They've 
+        //Enough Energy 
         if (Greenfoot.mouseClicked(this))
         {
             if (world.energyBar.energy >= 1)
@@ -40,6 +42,8 @@ public class StabCard extends AttackCard
             }
         }
     }
+    //Makes The StabCard Able To Use The BattleScreen Class
+    //Allowing The Actors To Use The 'healthBar' and 'energyBar'
     protected void addedToWorld​(World world)
     {
         this.world = (BattleScreen)world;
