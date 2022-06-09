@@ -17,7 +17,7 @@ public class HeavyShieldCard extends BlockCard
     //Resize The Card
     public HeavyShieldCard ()
     {
-        this(58, 66);
+        this(50, 60);
     }
     public HeavyShieldCard(int width, int height)
     {
