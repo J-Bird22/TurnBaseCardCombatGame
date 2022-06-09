@@ -16,7 +16,7 @@ public class MyWorld extends World
     public MyWorld()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(600, 400, 1); 
+        super(900, 625, 1); 
         prepare();
     }
     
@@ -26,21 +26,9 @@ public class MyWorld extends World
      */
     private void prepare()
     {
-
-        Path path = new Path();
-        addObject(path,38,232);
-        Path path2 = new Path();
-        addObject(path2,145,232);
-        Path path3 = new Path();
-        addObject(path3,258,231);
-        Path2 path22 = new Path2();
-        addObject(path22,328,218);
-        Path2 path23 = new Path2();
-        addObject(path23,328,141);
-        world1 world1 = new world1();
-        addObject(world1,329,47);
-        path22.setLocation(329,226);
-        wizzard wizzard = new wizzard();
-        addObject(wizzard,28,230);
+        for (int i = 0; i < 5; i ++) 
+        {
+            addObject(new Path(), 50*i + 10, 500); 
+        }
     }
 }
