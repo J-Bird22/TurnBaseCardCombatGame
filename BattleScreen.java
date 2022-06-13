@@ -18,6 +18,10 @@ public class BattleScreen extends World
     int e = 0;
     int f = 0;
     int g = 0;
+    int h = 0;
+    int i = 0;
+    int j = 0;
+    int k = 0;
     /**
      * Constructor for objects of class MyWorld.
      * 
@@ -56,34 +60,38 @@ public class BattleScreen extends World
         //Variable For The Cards Locations
         int cardsInHand = 4;
         int usedCards = 0;
-        int ownedCards = OwnedCards();
+        int ownedCards = a + b + c + d + e + f + g + h + i + j + k;
         int deckAmount = ownedCards - cardsInHand - usedCards;
         //Shuffle Used Cards Back Into Deck
         if (deckAmount == 0)
         {
             //shuffle usedCards
         }
+        if(Greenfoot.isKeyDown("W"))
+        {
+            newTurn();            
+        }
     }
+    //Filler Turn Code
+    //(Just Put This In The Actual Turn Method)
     public void newTurn()
     {
         //Test Method For Giving Random Cards From The Deck
-        for (int i = 0; i < 3; i++)
+        //pick random number
+        int[] cards = new int[] {1, 2 , 4}; // any set of values
+        int choice = cards[Greenfoot.getRandomNumber(cards.length)];
+        if (choice == 1)
         {
-            int card = Greenfoot.getRandomNumber(2);
-            if (card == 1)
-            {
-            addObject(new StabCard(), 50, 50);
-            }
-            else addObject(new HeavyShieldCard(), 50, 50);
+            addObject(new StabCard(), 100, 100);
         }
-        
-    }
-    public void OwnedCards()
-    {
-        //Method For Counting The Type And Amount Of Cards
-        
-        int Amt = a + b;
-        
+        if (choice == 2)
+        {
+            addObject(new HeavyShieldCard(), 100, 100);
+        }
+        if (choice == 4)
+        {
+            addObject(new PiercingBoltCard(), 100, 100);
+        }
     }
 }
 //private boolean mouseOnObject(Actor actor) {

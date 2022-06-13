@@ -17,7 +17,7 @@ public class StabCard extends AttackCard
     //Resize The Card
     public StabCard ()
     {
-        this(58, 66);
+        this(40, 62);
     }
     public StabCard(int width, int height)
     {
@@ -32,7 +32,7 @@ public class StabCard extends AttackCard
     public void act()
     {
         //Allowing The Player To Use The Card ONLY If They've 
-        //Enough Energy 
+        //Enough Energy - - - - - - - - - -
         if (Greenfoot.mouseClicked(this))
         {
             if (world.energyBar.energy >= 1)

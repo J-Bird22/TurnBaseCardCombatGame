@@ -1,31 +1,31 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class HeavyShieldCard here.
+ * Write a description of class PiercingBoltCard here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class HeavyShieldCard extends BlockCard
+public class PiercingBoltCard extends MagicCard
 {
-    //Shield Amount Of The HEAVYSHIELD Card
-    int Block = 6;
-    //Energy Cost Of The HEAVYSHIELD Card
-    int energyCost = 2;
+    //Attack Damage Of The PIERCINGBOLT Card
+    int Attack = 2;
+    //Energy Cost Of The PIERCINGBOLT Card
+    int energyCost = 3;
     BattleScreen world;
     //Resize The Card
-    public HeavyShieldCard ()
+    public PiercingBoltCard ()
     {
         this(40, 62);
     }
-    public HeavyShieldCard(int width, int height)
+    public PiercingBoltCard(int width, int height)
     {
         GreenfootImage image = getImage();
         image.scale(width, height);
         setImage(image);
     }
     /**
-     * Act - do whatever the StabCard wants to do. This method is called whenever
+     * Act - do whatever the PiercingBoltCard wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void act()
