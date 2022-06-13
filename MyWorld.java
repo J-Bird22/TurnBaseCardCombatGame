@@ -8,7 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class MyWorld extends World
 {
-
+    
     /**
      * Constructor for objects of class MyWorld.
      * 
@@ -30,5 +30,17 @@ public class MyWorld extends World
         {
             addObject(new Path(), 50*i + 10, 500); 
         }
+        for (int i = 0; i < 2; i ++) 
+        {
+            addObject(new Path(), 50*i + 370, 500); 
+        }
+        addObject( new EndPath1(), 260, 500); 
+        addObject( new World1(), 325, 450); 
+        World1 world12 = new World1();
+        addObject(world12,325,500);
+        World1 world13 = new World1();
+        addObject(world13,325,550);
+        Wizard wizard = new Wizard();
+        addObject(wizard,10,502);
     }
 }
