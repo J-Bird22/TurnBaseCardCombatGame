@@ -1,31 +1,31 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class PiercingBoltCard here.
+ * Write a description of class FastBlockCard here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class PiercingBoltCard extends MagicCard
+public class FastBlockCard extends BlockCard
 {
-    //Attack Damage Of The PIERCINGBOLT Card
-    int Attack = 2;
-    //Energy Cost Of The PIERCINGBOLT Card
-    int energyCost = 3;
+    //Shield Amount Of The FASTBLOCK Card
+    int Block = 2;
+    //Energy Cost Of The FASTBLOCK Card
+    int energyCost = 1;
     BattleScreen world;
     //Resize The Card
-    public PiercingBoltCard ()
+    public FastBlockCard ()
     {
         this(40, 62);
     }
-    public PiercingBoltCard(int width, int height)
+    public FastBlockCard(int width, int height)
     {
         GreenfootImage image = getImage();
         image.scale(width, height);
         setImage(image);
     }
     /**
-     * Act - do whatever the PiercingBoltCard wants to do. This method is called whenever
+     * Act - do whatever the FastBlockCard wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void act()
@@ -41,7 +41,7 @@ public class PiercingBoltCard extends MagicCard
             }
         }
     }
-    //Makes The PiercingBoltCard Able To Use The BattleScreen Class
+    //Makes The FastBlockCard Able To Use The BattleScreen Class
     //Allowing The Actors To Use The 'healthBar' and 'energyBar'
     protected void addedToWorld​(World world)
     {

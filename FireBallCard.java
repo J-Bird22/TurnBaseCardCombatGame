@@ -1,31 +1,31 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class PiercingBoltCard here.
+ * Write a description of class FireBall here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class PiercingBoltCard extends MagicCard
+public class FireBallCard extends MagicCard
 {
-    //Attack Damage Of The PIERCINGBOLT Card
-    int Attack = 2;
-    //Energy Cost Of The PIERCINGBOLT Card
+    //Attack Damage Of The FIREBALL Card
+    int Attack = 5;
+    //Energy Cost Of The FIREBALL Card
     int energyCost = 3;
     BattleScreen world;
     //Resize The Card
-    public PiercingBoltCard ()
+    public FireBallCard ()
     {
         this(40, 62);
     }
-    public PiercingBoltCard(int width, int height)
+    public FireBallCard(int width, int height)
     {
         GreenfootImage image = getImage();
         image.scale(width, height);
         setImage(image);
     }
     /**
-     * Act - do whatever the PiercingBoltCard wants to do. This method is called whenever
+     * Act - do whatever the FireBall wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void act()
@@ -41,7 +41,7 @@ public class PiercingBoltCard extends MagicCard
             }
         }
     }
-    //Makes The PiercingBoltCard Able To Use The BattleScreen Class
+    //Makes The FireBalldCard Able To Use The BattleScreen Class
     //Allowing The Actors To Use The 'healthBar' and 'energyBar'
     protected void addedToWorld​(World world)
     {
