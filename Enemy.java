@@ -9,6 +9,10 @@ public class Enemy extends Actor
 {
     //take variables typeH, typeD and typeS for hp, dmg, and spec attack values
     
+
+    //DISCLAIMER, THIS IS JUST ONE ENEMY TYPE RIGHT NOW, STATS AREN'T BASED OFF OF CLASS YET
+    
+
     
     
     //not sure if this is even gonna be implimented, cool idea though (1 for now cuz can't be 0)
@@ -125,6 +129,7 @@ public class Enemy extends Actor
        
        //re-select action for next turn
        action = Greenfoot.getRandomNumber(3);
+
        System.out.println("cooldown: " + cldwn);
        if (action == 0)
        {
@@ -142,6 +147,9 @@ public class Enemy extends Actor
        {
           System.out.println("enemy next action: Basic Attack");
        }
+
+       System.out.println("enemy next action: " + action);
+
     }   
     
     public void enemytype()

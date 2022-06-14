@@ -8,7 +8,9 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class PlayerTypeOne extends Player
 {
     //the player max hp
+
     int maxhpP = 15;
+
     
     //the player max mp (MP = Energy)
     int maxmp = 3;
@@ -17,6 +19,7 @@ public class PlayerTypeOne extends Player
     int heal; 
     
     //dmg to player hp
+
     int dmghP;
     
     //dmg to player mp (MP = Energy)
@@ -30,6 +33,15 @@ public class PlayerTypeOne extends Player
     
     //player mp
     int mp = maxmp - dmgm;
+
+    
+    
+    
+    
+    
+    
+    
+
     //mp regained at end of turn
     
     //stops stuff
