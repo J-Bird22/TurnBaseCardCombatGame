@@ -34,6 +34,18 @@ public class MyWorld extends World
         {
             addObject(new Path(), 50*i + 370, 500); 
         }
+        for (int i = 0; i < 3; i ++) 
+        {
+            addObject(new Path2(),475 , 50*i + 392); 
+        }
+        for (int i = 0; i < 3; i ++) 
+        {
+            addObject(new Path2(),325, 50*i + 300); 
+        }
+        for (int i = 0; i < 3; i ++) 
+        {
+            addObject(new Path(), 50*i + 360, 360); 
+        }
         addObject( new EndPath1(), 260, 500); 
         addObject( new World1(), 325, 450); 
         World1 world12 = new World1();
@@ -41,6 +53,11 @@ public class MyWorld extends World
         World1 world13 = new World1();
         addObject(world13,325,550);
         Wizard wizard = new Wizard();
-        addObject(wizard,10,502);
+        addObject(wizard,20,502);
+        Wall wall = new Wall(300, 10);
+        addObject(wall,120,460);
+        Wall wall2 = new Wall(300, 10);
+        addObject(wall2,120,540);
+        
     }
 }
