@@ -46,6 +46,10 @@ public class MyWorld extends World
         {
             addObject(new Path(), 50*i + 360, 360); 
         }
+        for (int i = 0; i < 5; i ++) 
+        {
+            addObject(new Path(), 50*i + 370, 550); 
+        }
         addObject( new EndPath1(), 260, 500); 
         addObject( new World1(), 325, 450); 
         World1 world12 = new World1();
@@ -58,6 +62,8 @@ public class MyWorld extends World
         addObject(wall,120,460);
         Wall wall2 = new Wall(300, 10);
         addObject(wall2,120,540);
-        
+
+        FinalBoss finalBoss = new FinalBoss();
+        addObject(finalBoss,794,78);
     }
 }
