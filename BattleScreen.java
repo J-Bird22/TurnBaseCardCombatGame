@@ -12,6 +12,7 @@ public class BattleScreen extends World
     //Allows Energy Bar To Be Used In Other Actors
     Energy energyBar;
     //Card Variables 
+    //"Letter"1 is a variable that's the total amount of a card
     int a1 = 0;
     int b1 = 0;
     int c1 = 0;
@@ -25,6 +26,8 @@ public class BattleScreen extends World
     int k1 = 0;
     int l1 = 0;
     int m1 = 0;
+    //"Letter"2 is A Variable Used To Add Cards To The Card Picker
+    //And Then Add It To To "Letter"1 Variables
     int a2 = 3;
     int b2 = 1;
     int c2 = 1;
@@ -38,19 +41,22 @@ public class BattleScreen extends World
     int k2 = 0;
     int l2 = 0;
     int m2 = 0;
-    int a = a1;
-    int b = b1;
-    int c = c1;
-    int d = d1;
-    int e = e1;
-    int f = f1;
-    int g = g1;
-    int h = h1;
-    int i = i1;
-    int j = j1;
-    int k = k1;
-    int l = l1;
-    int m = m1;
+    //"Letter"1 is the amount of cards currently in your deck
+    //that haven't been used yet
+    int a = a2;
+    int b = b2;
+    int c = c2;
+    int d = d2;
+    int e = e2;
+    int f = f2;
+    int g = g2;
+    int h = h2;
+    int i = i2;
+    int j = j2;
+    int k = k2;
+    int l = l2;
+    int m = m2;
+    //The Array Used To Pick 4 Cards Every Turn
     ArrayList<Integer> deck = new ArrayList<Integer>();
     /**
      * Constructor for objects of class MyWorld.
@@ -68,15 +74,9 @@ public class BattleScreen extends World
      */
     private void prepare()
     {
-        //AddObjects
-        Deck deck = new Deck();
-        addObject(deck,234,365);
-        StabCard stabCard = new StabCard();
-        addObject(stabCard,27,365);
+        //AddEnergy
         energyBar = new Energy();
         addObject(energyBar,570,370);
-        HeavyShieldCard heavyShieldCard = new HeavyShieldCard(40, 62);
-        addObject(heavyShieldCard,79,365);
     }
     public void act()
     {
@@ -87,27 +87,9 @@ public class BattleScreen extends World
             Greenfoot.delay(30);
         }
         //Variable For The Cards Locations
-        int cardsInHand = 0;
-        int usedCards = 0;
         int ownedCards = a + b + c + d + e + f + g + h + i + j + k + l + m;
-        int deckAmount = ownedCards - cardsInHand - usedCards;
-        //Shuffle Used Cards Back Into Deck
-        if (deckAmount == 0)
-        {
-            a = a2;
-            b = b2;
-            c = c2;
-            d = d2;
-            e = e2;
-            f = f2;
-            g = g2;
-            h = h2;
-            i = i2;
-            j = j2;
-            k = k2;
-            l = l2;
-            m = m2;
-        }
+        int deckAmount = ownedCards;
+        
         //AdminMethodOfNewTestTurn
         if(Greenfoot.isKeyDown("W"))
         {
@@ -202,96 +184,91 @@ public class BattleScreen extends World
             m2--;
             m1++;
         }
+        
     }
     //Filler Turn Code
     //(Just Put This In The Actual Turn Method)
     public void newTurn()
     {
         //Selects A Random Number Of Only The Numbers Put Into The cards Variable
-        for (i = 0; i < 4; i++)
+        for (int ii = 0; ii < 4; ii++)
         {
+            showText("i =" + ii, 150, 150);
             int choice = deck.get(Greenfoot.getRandomNumber(deck.size()));
             //The Code For After A Card Is Selected It Gets Added Into Your Hand
-            int cardsInHand = 0;
-            int usedCards = 0;
             int ownedCards = a + b + c + d + e + f + g + h + i + j + k + l + m;
-            int deckAmount = ownedCards - cardsInHand - usedCards;
-            if (deckAmount == 0)
-            {
-                a = a2;
-                b = b2;
-                c = c2;
-                d = d2;
-                e = e2;
-                f = f2;
-                g = g2;
-                h = h2;
-                i = i2;
-                j = j2;
-                k = k2;
-                l = l2;
-                m = m2;
-            }
+            int deckAmount = ownedCards;
             if (choice == 1)
             {
                 if (a > 0)
                 {
-                    addObject(new StabCard(), 200, 200);
+                    addObject(new StabCard(), 50*ii + 30, 365);
                     a--;
                 }
-                else i--;
+                else ii--;
             }
             if (choice == 2)
             {
                 if (b > 0)
                 {
-                    addObject(new HeavyShieldCard(), 200, 200);
+                    addObject(new HeavyShieldCard(), 50*ii + 30, 365);
                     b--;
                 }
-                else i--;
+                else ii--;
             }
             if (choice == 3)
             {
                 if (c > 0)
                 {
-                    addObject(new PiercingBoltCard(), 200, 200);
+                    addObject(new PiercingBoltCard(), 50*ii + 30, 365);
                     c--;
                 }
-                else i--;
+                else ii--;
             }
             if (choice == 4)
             {
                 if (d > 0)
                 {
-                    addObject(new HeavyStrikeCard(), 200, 200);
+                    addObject(new HeavyStrikeCard(), 50*ii + 30, 365);
                     d--;
                 }
-                else i--;
+                else ii--;
             }
             if (choice == 5)
             {
                 if (e > 0)
                 {
-                    addObject(new FastBlockCard(), 200, 200);
+                    addObject(new FastBlockCard(), 50*ii + 30, 365);
                     e--;
                 }
-                else i--;
+                else ii--;
             }
             if (choice == 6)
             {
                 if (f > 0)
                 {
-                    addObject(new FireBallCard(), 200, 200);
+                    addObject(new FireBallCard(), 50*ii + 30, 365);
                     f--;
                 }
-                else i--;
+                else ii--;
+            }
+            //Shuffle Used Cards Back Into Deck (Incase You Reach 0 cards mid turn)
+            if (deckAmount == 0)
+            {
+                a = a1;
+                b = b1;
+                c = c1;
+                d = d1;
+                e = e1;
+                f = f1;
+                g = g1;
+                h = h1;
+                i = i1;
+                j = j1;
+                k = k1;
+                l = l1;
+                m = m1;
             }
         }
     }
-    
-    
 }
-//private boolean mouseOnObject(Actor actor) {
-//    MouseInfo mouse = Greenfoot.getMouseInfo();
-//    return mouse != null && mouse.getX() > actor.getX() - actor.getImage().getWidth()/2 && mouse.getX() < actor.getX() + actor.getImage().getWidth()/2 && 
-//       mouse.getY() > actor.getY() - actor.getImage().getHeight()/2 && mouse.getY() < actor.getY() + actor.getImage().getHeight()/2;

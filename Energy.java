@@ -10,7 +10,7 @@ public class Energy extends Actor
 
 {   
     //EnergyINT
-    public int energy = 300;
+    public int energy = 3;
     //Create The Images Showing How Much Energy The Player Has
     GreenfootImage image0 = new GreenfootImage("C:/Users/moorej/Documents/GitHub/TurnBaseCardCombatGame/images/Energy 0.png");
     GreenfootImage image1 = new GreenfootImage("C:/Users/moorej/Documents/GitHub/TurnBaseCardCombatGame/images/Energy 1.png");
