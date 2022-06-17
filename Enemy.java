@@ -7,14 +7,6 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Enemy extends Actor
 {
-    //take variables typeH, typeD and typeS for hp, dmg, and spec attack values
-    
-
-    //DISCLAIMER, THIS IS JUST ONE ENEMY TYPE RIGHT NOW, STATS AREN'T BASED OFF OF CLASS YET
-    
-
-    
-    
     //not sure if this is even gonna be implimented, cool idea though (1 for now cuz can't be 0)
     int level = 1; //this can probably be based on what level of the world the player is on
     
@@ -37,7 +29,7 @@ public class Enemy extends Actor
     int maxhp;
     
     // armor value the enemy gains by defending, (temporary hp)
-    int armor = maxhp/4;
+    int armor;
     
     //enemy current hp
     int hp = maxhp - dmgh;
@@ -54,15 +46,28 @@ public class Enemy extends Actor
     //if the enemy is waiting for player to take their turn
     boolean sit = true;
     
+    //determines if the enemy is a bossfight or not (will be based off of another variable later)
+    int boss = 0;
+    
+    //image stuff
+    GreenfootImage placeholder;
+    GreenfootImage placehold;
+    GreenfootImage holdplace;
+    {
+       placeholder = new GreenfootImage("placeholder.png");
+       placehold = new GreenfootImage("placehold.png");
+       holdplace = new GreenfootImage("holdplace.png");
+    }
+    
     /**
      * Act - do whatever the Rat wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void act() 
-    {
-        enemytype();
+    {   
         if (stopE ==  0)
         {
+           enemytype();
            System.out.println("Enemy max HP: " + maxhp);
            System.out.println("Enemy hp: " + hp);
            System.out.println("Enemy dmg: " + dmg);
@@ -76,7 +81,7 @@ public class Enemy extends Actor
            sit = false;
         }
         
-        //if its the enemy's turn, they take thier turn
+        //if its the enemy's turn, they take thier turn (with delay for player's sake)
         if (sit == false)
         {
            Greenfoot.delay(100);
@@ -86,7 +91,7 @@ public class Enemy extends Actor
     
     public void turn()
     {
-       //turn actions based on rng
+       //turn actions based on rng 66% attack chance, 33% defend chance
        if (action == 0)
        {
           //attack (typeD in dmg)
@@ -116,7 +121,6 @@ public class Enemy extends Actor
        
        //ends enemy turn and starts player turn
        Actor turnUnblocker = getOneIntersectingObject(TurnUnblocker.class);
-       
        if (turnUnblocker != null)
        {
           System.out.println("enemy ended turn");
@@ -129,7 +133,6 @@ public class Enemy extends Actor
        
        //re-select action for next turn
        action = Greenfoot.getRandomNumber(3);
-
        System.out.println("cooldown: " + cldwn);
        if (action == 0)
        {
@@ -147,39 +150,88 @@ public class Enemy extends Actor
        {
           System.out.println("enemy next action: Basic Attack");
        }
-
-       System.out.println("enemy next action: " + action);
-
     }   
     
     public void enemytype()
     {
-       if (choose == 0)
+       //this is just used to create more enemies, 3 bosses and normal enemies have been created so far
+       if (boss == 1 && choose == 0)
+       {
+          //dragon
+          maxhp = 50;
+          hp = 50;
+          dmg = 7;
+          def = 3;
+          armor = 4;
+          spec = 2 + Greenfoot.getRandomNumber(4);
+       }
+       else if (boss == 1 && choose == 1)
+       {
+          //beholder
+          maxhp = 30;
+          hp = 30;
+          dmg = 5;
+          def = 2;
+          armor = 6;
+          spec = Greenfoot.getRandomNumber(9);
+       }
+       else if (boss == 1 && choose == 2)
+       {
+          //catapult or something
+          maxhp = 70;
+          hp = 70;
+          dmg = 6;
+          def = 0;
+          armor = 2;
+          spec = 2;
+       }
+        else if (choose == 0)
        {
           //rat
+          setImage(placehold); //placeholder image for enemy type
           maxhp = 9;
           hp = 9;
           dmg = 2;
           def = 0;
+          armor = 3;
           spec = 1 + Greenfoot.getRandomNumber(1);
        }
        else if (choose == 1)
        {
           //slime
+          setImage(holdplace); //placeholder image for enemy type
           maxhp = 6;
           hp = 6;
-          dmg = 2;
+          dmg = 1;
           def = 1;
+          armor = 2;
           spec = 3;
        }
        else if (choose == 2)
        {
           //goblin
+          setImage(placeholder); //placeholder image for enemy type
           maxhp = 5;
           hp = 5;
           dmg = 3;
           def = 1;
+          armor = 1;
           spec = 2;
        }
+    }
+    
+    public void takedmg()
+    {
+       //get enemy class to use its variables to adjust player stats
+       Class Player = getClass();
+       
+       int eAtkp;//= carddmg;
+       
+       
+       //if player uses card, take dmg based on card dmg value
+       //if (Player uses card)
+       //{
+       //   dmgh + carddmg
+       //}
     }
 }
