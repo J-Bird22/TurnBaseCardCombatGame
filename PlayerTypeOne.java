@@ -8,7 +8,9 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class PlayerTypeOne extends Player
 {
     //the player max hp
-    int maxhp = 15;
+
+    int maxhpP = 15;
+
     
     //the player max mp (MP = Energy)
     int maxmp = 3;
@@ -17,16 +19,29 @@ public class PlayerTypeOne extends Player
     int heal; 
     
     //dmg to player hp
-    int dmgh;
+
+    int dmghP;
     
     //dmg to player mp (MP = Energy)
-    int dmgmp;
+    int dmgm;
+    
+    //block dmg
+    int block;
     
     //player hp
-    int hp = maxhp - dmgh + heal;
+    int hp = maxhpP - dmghP + heal;
     
     //player mp
-    int mp = maxmp - dmgmp;
+    int mp = maxmp - dmgm;
+
+    
+    
+    
+    
+    
+    
+    
+
     //mp regained at end of turn
     
     //stops stuff
@@ -89,5 +104,30 @@ public class PlayerTypeOne extends Player
     public void animate()
     {
        //animation stuff
+    }
+    
+    public void dmg()
+    {
+       //get enemy class
+       Class Enemy = getClass();
+       int eAtk = 0;//dmg;
+       int seAtk = 0;//dmg + spec;
+       int move = 0;//action;
+       int cool = 0;//cldwn;
+       
+       //if enemy attacks, take dmg according to dmg value
+       
+       if (move == 0)
+       {
+          //hp = hp - eAtk
+       }
+       else if (move == 2 && cool > 3)
+       {
+          //hp = hp - seAtk
+       }
+       else if (move == 2)
+       {
+          //hp = hp - eAtk
+       }
     }
 }

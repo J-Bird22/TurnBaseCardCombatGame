@@ -9,8 +9,10 @@ public class Enemy extends Actor
 {
     //take variables typeH, typeD and typeS for hp, dmg, and spec attack values
     
+
     //DISCLAIMER, THIS IS JUST ONE ENEMY TYPE RIGHT NOW, STATS AREN'T BASED OFF OF CLASS YET
     
+
     
     
     //not sure if this is even gonna be implimented, cool idea though (1 for now cuz can't be 0)
@@ -77,7 +79,8 @@ public class Enemy extends Actor
         //if its the enemy's turn, they take thier turn
         if (sit == false)
         {
-          turn();
+           Greenfoot.delay(100);
+           turn();
         }
     }    
     
@@ -126,13 +129,34 @@ public class Enemy extends Actor
        
        //re-select action for next turn
        action = Greenfoot.getRandomNumber(3);
+
+       System.out.println("cooldown: " + cldwn);
+       if (action == 0)
+       {
+          System.out.println("enemy next action: Basic Attack");
+       }
+       else if (action == 1)
+       {
+          System.out.println("enemy next action: Block");
+       }
+       else if (action ==  2 && cldwn > 3)
+       {
+          System.out.println("enemy next action: special attack!");
+       }
+       else if (action == 2)
+       {
+          System.out.println("enemy next action: Basic Attack");
+       }
+
        System.out.println("enemy next action: " + action);
+
     }   
     
     public void enemytype()
     {
        if (choose == 0)
        {
+          //rat
           maxhp = 9;
           hp = 9;
           dmg = 2;
@@ -141,6 +165,7 @@ public class Enemy extends Actor
        }
        else if (choose == 1)
        {
+          //slime
           maxhp = 6;
           hp = 6;
           dmg = 2;
@@ -149,6 +174,7 @@ public class Enemy extends Actor
        }
        else if (choose == 2)
        {
+          //goblin
           maxhp = 5;
           hp = 5;
           dmg = 3;
