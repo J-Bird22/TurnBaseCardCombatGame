@@ -56,6 +56,8 @@ public class BattleScreen extends World
     int k = k2;
     int l = l2;
     int m = m2;
+    //Int For Turning Screen Numbers On
+    int textOnScreen = -1;
     //The Array Used To Pick 4 Cards Every Turn
     ArrayList<Integer> deck = new ArrayList<Integer>();
     /**
@@ -81,7 +83,7 @@ public class BattleScreen extends World
     public void act()
     {
         //Temporary Way For "New Turn"
-        if (Greenfoot.isKeyDown("Space"))
+        if (Greenfoot.isKeyDown("W"))
         {
             newTurn();
             Greenfoot.delay(30);
@@ -89,22 +91,6 @@ public class BattleScreen extends World
         //Variable For The Cards Locations
         int ownedCards = a + b + c + d + e + f + g + h + i + j + k + l + m;
         int deckAmount = ownedCards;
-        
-        //AdminMethodOfNewTestTurn
-        if(Greenfoot.isKeyDown("W"))
-        {
-            newTurn();
-            Greenfoot.delay(10);
-        }
-        //Text On Screen To See The Variables
-        showText("a =" + a, 50, 50);
-        showText("b =" + b, 50, 70);
-        showText("c =" + c, 50, 90);
-        showText("d =" + d, 50, 110);
-        showText("e =" + e, 50, 130);
-        showText("f =" + f, 50, 150);
-        showText("deck =" + deck, 70, 190);
-        showText("DeckAmount =" + deckAmount, 90, 210);
         //Each Refers To Adding A Possibility To Add A Card To The Deck
         if (a2 > 0)
         {
@@ -184,7 +170,25 @@ public class BattleScreen extends World
             m2--;
             m1++;
         }
-        
+        if (Greenfoot.isKeyDown ("Enter"))
+        {
+            textOnScreen = textOnScreen*-1;
+            Greenfoot.delay(30);
+        }
+        //Code To Show Number Of Cards (For Coding)
+        //You Can't Remove The Text After Added 
+        if (textOnScreen == 1)
+        {
+            //Text On Screen To See The Variables
+            showText("a =" + a, 50, 50);
+            showText("b =" + b, 50, 70);
+            showText("c =" + c, 50, 90);
+            showText("d =" + d, 50, 110);
+            showText("e =" + e, 50, 130);
+            showText("f =" + f, 50, 150);
+            showText("deck =" + deck, 70, 190);
+            showText("DeckAmount =" + deckAmount, 90, 210);
+        }
     }
     //Filler Turn Code
     //(Just Put This In The Actual Turn Method)
@@ -193,7 +197,6 @@ public class BattleScreen extends World
         //Selects A Random Number Of Only The Numbers Put Into The cards Variable
         for (int ii = 0; ii < 4; ii++)
         {
-            showText("i =" + ii, 150, 150);
             int choice = deck.get(Greenfoot.getRandomNumber(deck.size()));
             //The Code For After A Card Is Selected It Gets Added Into Your Hand
             int ownedCards = a + b + c + d + e + f + g + h + i + j + k + l + m;
@@ -270,5 +273,7 @@ public class BattleScreen extends World
                 m = m1;
             }
         }
+        //ResetEnergyOnNewTurn
+        energyBar.energy = 3;
     }
 }
