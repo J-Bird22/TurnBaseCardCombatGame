@@ -1,0 +1,15 @@
+#BlueJ class context
+comment0.target=Energy
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ Energy\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=
+comment1.target=int\ level()
+comment2.params=
+comment2.target=Energy()
+comment3.params=width\ height
+comment3.target=Energy(int,\ int)
+comment4.params=
+comment4.target=void\ act()
+comment4.text=\r\n\ Act\ -\ do\ whatever\ the\ Energy\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n
+comment5.params=amount
+comment5.target=void\ decreaseEnergy(int)
+numComments=6
