@@ -16,7 +16,8 @@ public class Shopbutton extends Actor
     {
          if (Greenfoot.mouseClicked(this))
             {
-                getWorld().addObject(new ShopMenu(), 300, 190);          
+                getWorld().addObject(new ShopMenu(), 300, 190);
+                getWorld().addObject(new Strenght(), 250, 150); 
             }  
     }  
     public Shopbutton()
