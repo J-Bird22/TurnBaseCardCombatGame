@@ -1,15 +1,15 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class shopMenu here.
+ * Write a description of class Buy here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class ShopMenu extends Actor
+public class Buy extends Actor
 {
     /**
-     * Act - do whatever the shopMenu wants to do. This method is called whenever
+     * Act - do whatever the Buy wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void act() 

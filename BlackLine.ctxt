@@ -7,5 +7,5 @@ comment1.text=\r\n\ Act\ -\ do\ whatever\ the\ blackLine\ wants\ to\ do.\ This\ 
 comment2.params=
 comment2.target=BlackLine()
 comment3.params=width\ height
-comment3.target=Blackline(int,\ int)
+comment3.target=BlackLine(int,\ int)
 numComments=4
