@@ -78,7 +78,7 @@ public class BattleScreen extends World
     {
         //AddEnergy
         energyBar = new Energy();
-        addObject(energyBar,570,370);
+        addObject(energyBar,550,380);
     }
     public void act()
     {
