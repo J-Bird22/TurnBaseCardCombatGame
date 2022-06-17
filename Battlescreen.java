@@ -7,6 +7,11 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Battlescreen extends World
 {
+    Enemy dmg;
+    Enemy dmgh;
+    Enemy action;
+    Enemy cldwn;
+    Enemy spec;
     /**
      * Constructor for objects of class MyWorld.
      * 
@@ -28,7 +33,7 @@ public class Battlescreen extends World
         addObject(enemy,150,200);
         TurnUnblocker turnUnblocker = new TurnUnblocker();
         addObject(turnUnblocker,450,200);
-        PlayerTypeOne playerTypeOne = new PlayerTypeOne();
-        addObject(playerTypeOne,450,200);
+        Player player = new Player();
+        addObject(player,450,200);
     }
 }
