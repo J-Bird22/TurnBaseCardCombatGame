@@ -1,10 +1,6 @@
 #Greenfoot project file
 class.BlackLine.image=Line.png
-<<<<<<< Updated upstream
-class.Buy.image=shopMenu.png
-=======
-class.ChickenBone.image=ChickenBone.png
->>>>>>> Stashed changes
+class.Buy.image=Buy.png
 class.EndPath1.image=path.png
 class.MyWorld.image=map.png
 class.Path.image=path.png
@@ -12,7 +8,6 @@ class.Path2.image=path2.png
 class.ShopMenu.image=shoptMenu.png
 class.Shopbutton.image=Shopbutton\ (2).png
 class.StoreKeeper.image=store\ keeper.png
-class.Strenght.image=potion.png
 class.Text.image=Text.png
 class.Wall.image=wall\ (2).png
 class.Wizard.image=orb.png
@@ -21,18 +16,24 @@ class.shop.image=background\ (1).png
 dependency1.from=shop
 dependency1.to=StoreKeeper
 dependency1.type=UsesDependency
-dependency10.from=World1
-dependency10.to=BattleScreen
+dependency10.from=Shopbutton
+dependency10.to=ShopMenu
 dependency10.type=UsesDependency
-dependency11.from=Wizard
-dependency11.to=Text
+dependency11.from=Shopbutton
+dependency11.to=Buy
 dependency11.type=UsesDependency
-dependency12.from=Wizard
-dependency12.to=Wall
+dependency12.from=World1
+dependency12.to=BattleScreen
 dependency12.type=UsesDependency
 dependency13.from=Wizard
-dependency13.to=EndPath1
+dependency13.to=Text
 dependency13.type=UsesDependency
+dependency14.from=Wizard
+dependency14.to=Wall
+dependency14.type=UsesDependency
+dependency15.from=Wizard
+dependency15.to=EndPath1
+dependency15.type=UsesDependency
 dependency2.from=shop
 dependency2.to=BlackLine
 dependency2.type=UsesDependency
@@ -57,19 +58,13 @@ dependency8.type=UsesDependency
 dependency9.from=MyWorld
 dependency9.to=Wall
 dependency9.type=UsesDependency
-editor.fx.0.height=0
-editor.fx.0.width=0
-editor.fx.0.x=0
-editor.fx.0.y=0
-<<<<<<< Updated upstream
+editor.fx.0.height=739
+editor.fx.0.width=816
+editor.fx.0.x=275
+editor.fx.0.y=-4
 height=744
-package.numDependencies=13
-package.numTargets=16
-=======
-height=738
-package.numDependencies=14
+package.numDependencies=15
 package.numTargets=17
->>>>>>> Stashed changes
 project.charset=windows-1252
 publish.hasSource=false
 publish.locked=true
@@ -92,89 +87,54 @@ target1.width=120
 target1.x=0
 target1.y=0
 target10.height=50
-<<<<<<< Updated upstream
-target10.name=ShopMenu
-=======
 target10.name=Shopbutton
->>>>>>> Stashed changes
 target10.showInterface=false
 target10.type=ClassTarget
-target10.width=110
+target10.width=90
 target10.x=0
 target10.y=0
 target11.height=50
-<<<<<<< Updated upstream
-target11.name=BattleScreen
-target11.showInterface=false
-target11.type=ClassTarget
-target11.width=90
-target11.x=0
-target11.y=0
-target12.height=70
-target12.name=Path2
-=======
 target11.name=ShopMenu
 target11.showInterface=false
 target11.type=ClassTarget
-target11.width=80
+target11.width=110
 target11.x=0
 target11.y=0
 target12.height=50
 target12.name=BattleScreen
->>>>>>> Stashed changes
 target12.showInterface=false
 target12.type=ClassTarget
 target12.width=90
 target12.x=0
 target12.y=0
 target13.height=70
-<<<<<<< Updated upstream
-target13.name=World1
-=======
 target13.name=Path2
->>>>>>> Stashed changes
 target13.showInterface=false
 target13.type=ClassTarget
 target13.width=120
 target13.x=0
 target13.y=0
-<<<<<<< Updated upstream
-target14.height=50
-target14.name=StoreKeeper
-=======
 target14.height=70
 target14.name=World1
->>>>>>> Stashed changes
 target14.showInterface=false
 target14.type=ClassTarget
-target14.width=90
+target14.width=120
 target14.x=0
 target14.y=0
-<<<<<<< Updated upstream
-target15.height=70
-target15.name=Wizard
-=======
 target15.height=50
 target15.name=StoreKeeper
->>>>>>> Stashed changes
 target15.showInterface=false
 target15.type=ClassTarget
 target15.width=90
 target15.x=0
 target15.y=0
 target16.height=70
-<<<<<<< Updated upstream
-target16.name=MyWorld
-=======
 target16.name=Wizard
->>>>>>> Stashed changes
 target16.showInterface=false
 target16.type=ClassTarget
 target16.width=120
 target16.x=0
 target16.y=0
-<<<<<<< Updated upstream
-=======
 target17.height=70
 target17.name=MyWorld
 target17.showInterface=false
@@ -182,7 +142,6 @@ target17.type=ClassTarget
 target17.width=120
 target17.x=0
 target17.y=0
->>>>>>> Stashed changes
 target2.height=50
 target2.name=ChickenBone
 target2.showInterface=false
@@ -205,62 +164,42 @@ target4.width=80
 target4.x=0
 target4.y=0
 target5.height=50
-<<<<<<< Updated upstream
-target5.name=Buy
-=======
 target5.name=BlackLine
->>>>>>> Stashed changes
 target5.showInterface=false
 target5.type=ClassTarget
-target5.width=80
+target5.width=110
 target5.x=0
 target5.y=0
 target6.height=50
-<<<<<<< Updated upstream
-target6.name=EndPath1
-=======
-target6.name=Strenght
->>>>>>> Stashed changes
+target6.name=Buy
 target6.showInterface=false
 target6.type=ClassTarget
-target6.width=110
+target6.width=80
 target6.x=0
 target6.y=0
 target7.height=50
-<<<<<<< Updated upstream
-target7.name=Text
-=======
 target7.name=EndPath1
->>>>>>> Stashed changes
 target7.showInterface=false
 target7.type=ClassTarget
 target7.width=110
 target7.x=0
 target7.y=0
 target8.height=50
-<<<<<<< Updated upstream
-target8.name=MainMenu
-=======
 target8.name=Text
->>>>>>> Stashed changes
 target8.showInterface=false
 target8.type=ClassTarget
 target8.width=80
 target8.x=0
 target8.y=0
 target9.height=50
-<<<<<<< Updated upstream
-target9.name=Shopbutton
-=======
 target9.name=MainMenu
->>>>>>> Stashed changes
 target9.showInterface=false
 target9.type=ClassTarget
-target9.width=90
+target9.width=80
 target9.x=0
 target9.y=0
 version=3.0.0
 width=1382
 world.lastInstantiated=shop
 xPosition=0
-yPosition=6
+yPosition=0
