@@ -60,6 +60,10 @@ public class MyWorld extends World
         {
             addObject(new Path(), 50*i + 630, 410); 
         }
+        for (int i = 0; i < 3; i ++) 
+        {
+            addObject(new Path(), 50*i + 700, 600); 
+        }
         addObject( new EndPath1(), 260, 500); 
         addObject( new World1(), 325, 450); 
         World1 world12 = new World1();
@@ -78,5 +82,6 @@ public class MyWorld extends World
         addObject( new World1(), 685, 550);
         addObject( new World1(), 685, 500);
         addObject( new World1(), 685, 600);
+        addObject( new World1(), 580, 410);
     }
 }
