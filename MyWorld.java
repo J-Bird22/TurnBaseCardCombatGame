@@ -8,7 +8,6 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class MyWorld extends World
 {
-    
     /**
      * Constructor for objects of class MyWorld.
      * 
@@ -19,7 +18,6 @@ public class MyWorld extends World
         super(900, 625, 1); 
         prepare();
     }
-    
     /**
      * Prepare the world for the start of the program.
      * That is: create the initial objects and add them to the world.
@@ -30,13 +28,13 @@ public class MyWorld extends World
         {
             addObject(new Path(), 50*i + 10, 500); 
         }
-        for (int i = 0; i < 2; i ++) 
+        for (int i = 0; i < 3; i ++) 
         {
             addObject(new Path(), 50*i + 370, 500); 
         }
         for (int i = 0; i < 3; i ++) 
         {
-            addObject(new Path2(),475 , 50*i + 392); 
+            addObject(new Path2(),495 , 50*i + 375); 
         }
         for (int i = 0; i < 3; i ++) 
         {
@@ -50,6 +48,18 @@ public class MyWorld extends World
         {
             addObject(new Path(), 50*i + 370, 550); 
         }
+        for (int i = 0; i < 2; i ++) 
+        {
+            addObject(new Path(), 50*i + 730, 550); 
+        }
+        for (int i = 0; i < 3; i ++) 
+        {
+            addObject(new Path2(),805, 50*i + 425); 
+        }
+         for (int i = 0; i < 4; i ++) 
+        {
+            addObject(new Path(), 50*i + 630, 410); 
+        }
         addObject( new EndPath1(), 260, 500); 
         addObject( new World1(), 325, 450); 
         World1 world12 = new World1();
@@ -62,8 +72,11 @@ public class MyWorld extends World
         addObject(wall,120,460);
         Wall wall2 = new Wall(300, 10);
         addObject(wall2,120,540);
-
         FinalBoss finalBoss = new FinalBoss();
-        addObject(finalBoss,794,78);
+        addObject(finalBoss,794,78); 
+        addObject( new EndPath2(), 625, 550);
+        addObject( new World1(), 685, 550);
+        addObject( new World1(), 685, 500);
+        addObject( new World1(), 685, 600);
     }
 }
