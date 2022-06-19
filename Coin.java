@@ -14,6 +14,16 @@ public class Coin extends Actor
      */
     public void act() 
     {
-        // Add your action code here.
-    }    
+        
+    }
+    public Coin()
+    {
+            this(20,30); 
+    }
+    public Coin(int width, int height)
+    {
+        GreenfootImage image = getImage();
+        image.scale(width, height); 
+        setImage(image);
+    }
 }
