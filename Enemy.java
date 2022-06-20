@@ -48,15 +48,18 @@ public class Enemy extends Actor
     
     //determines if the enemy is a bossfight or not (will be based off of another variable later)
     int boss = 0;
-    
+    /** - Jesse
+     * The Images Below I Changed Since Somewhere We Lost The Placeholder Images
+     * And Im Not Sure If They Need  A Specefic Look But I Gave Them An Image To Run
+     */
     //image stuff
     GreenfootImage placeholder;
     GreenfootImage placehold;
     GreenfootImage holdplace;
     {
-       placeholder = new GreenfootImage("placeholder.png");
-       placehold = new GreenfootImage("placehold.png");
-       holdplace = new GreenfootImage("holdplace.png");
+       placeholder = new GreenfootImage("images/Filler1.png");
+       placehold = new GreenfootImage("images/Filler2.png");
+       holdplace = new GreenfootImage("images/Filler3.png");
     }
     
     /**

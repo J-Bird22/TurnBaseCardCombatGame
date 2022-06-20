@@ -13,7 +13,7 @@ public class StabCard extends AttackCard
     //Energy Cost Of The STAB Card
     int energyCost = 1;
     //
-    BattleScreen world;
+    Battlescreen world;
     //Resize The Card
     public StabCard ()
     {
@@ -33,19 +33,22 @@ public class StabCard extends AttackCard
     {
         //Allowing The Player To Use The Card ONLY If They've 
         //Enough Energy 
-        if (Greenfoot.mouseClicked(this))
-        {
-            if (world.energyBar.energy >= 1)
-            {
-                world.energyBar.decreaseEnergy(energyCost);
-                getWorld().removeObject(this);
-            }
-        }
+        //
+        //Code Below This Requires Something That Has Yet To Be Merged
+        //
+        //if (Greenfoot.mouseClicked(this))
+        //{
+        //    if (world.energyBar.energy >= 1)
+        //    {
+        //        world.energyBar.decreaseEnergy(energyCost);
+        //        getWorld().removeObject(this);
+        //    }
+        //}
     }
     //Makes The StabCard Able To Use The BattleScreen Class
     //Allowing The Actors To Use The 'healthBar' and 'energyBar'
     protected void addedToWorld​(World world)
     {
-        this.world = (BattleScreen)world;
+        this.world = (Battlescreen)world;
     }
 }
