@@ -1,19 +1,22 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class World1test here.
+ * Write a description of class Text4 here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class World1test extends Actor
+public class Text4 extends Actor
 {
     /**
-     * Act - do whatever the World1test wants to do. This method is called whenever
+     * Act - do whatever the Text4 wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void act() 
     {
-       
+         if (Greenfoot.mouseClicked(this)) 
+        {
+            Greenfoot.setWorld(new MainMenu());
+        }
     }    
 }

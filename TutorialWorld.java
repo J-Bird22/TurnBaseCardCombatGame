@@ -20,6 +20,10 @@ public class TutorialWorld extends World
         {
             addObject(new Path(), 50*i + 10, 250); 
         }
+        for (int i = 0; i < 3; i ++) 
+        {
+            addObject(new Path(), 50*i + 300, 250); 
+        }
         prepare();
     }
     
@@ -33,7 +37,18 @@ public class TutorialWorld extends World
         addObject(text,214,75);
         World1test world1test = new World1test();
         addObject(world1test,255,248);
-        Text2 text2 = new Text2();
-        addObject(text2,211,330);
+
+        Wizard wizard = new Wizard();
+        addObject(wizard,16,253);
+        Cointest cointest = new Cointest(50, 50);
+        addObject(cointest,436,248);
+        Wall wall = new Wall(500, 10);
+        addObject(wall,240,200);
+        Wall wall2 = new Wall(500, 10);
+        addObject(wall2,193,500);
+        wall2.setLocation(249,290);
+        Wall wall3 = new Wall(10, 50);
+        addObject(wall3,502,257);
+        wall3.setLocation(486,247);
     }
 }
