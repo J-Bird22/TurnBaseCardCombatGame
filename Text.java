@@ -13,8 +13,8 @@ public class Text extends Actor
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void act() 
-    {
-      Greenfoot.delay(10);
-      getWorld().removeObject(this);
-    }    
+    {   
+        Greenfoot.delay(300);
+        getWorld().removeObject(this); 
+    }
 }
