@@ -42,6 +42,16 @@ public class Wizard extends Actor
           getWorld().addObject( new Text(), 200, 200);  
         }
      }
+       public Wizard()
+    {
+            this(40,40); 
+    }
+    public Wizard(int width, int height)
+    {
+        GreenfootImage image = getImage();
+        image.scale(width, height); 
+        setImage(image);
+    }
     public boolean isTouchingWall()
     {
         boolean isTouchingWall = true; 
