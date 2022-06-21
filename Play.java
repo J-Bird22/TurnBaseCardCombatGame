@@ -1,24 +1,22 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Text here.
+ * Write a description of class Play here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Text extends Actor
+public class Play extends Actor
 {
-     int i = 0;
     /**
-     * Act - do whatever the Text wants to do. This method is called whenever
+     * Act - do whatever the Play wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void act() 
-    {   
-        if (i == 100)
+    {
+        if (Greenfoot.mouseClicked("this")) 
         {
-            getWorld().removeObject(this); 
+            Greenfoot.setWorld(new MyWorld());
         }
-        i ++;  
-    }
+    }    
 }

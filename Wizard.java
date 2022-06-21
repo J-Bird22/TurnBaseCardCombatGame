@@ -10,13 +10,14 @@ public class Wizard extends Actor
 {
     private final int STEP = 3; 
     private int velocity;
+    boolean isResetShown = false;
     /**
      * Act - do whatever the wizzard wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void act()
     {
-      Text text = new Text();
+      
       if (Greenfoot.isKeyDown("W") && didBumpHead())
         {
             setLocation( getX(), getY()-5);
@@ -35,9 +36,24 @@ public class Wizard extends Actor
         }    
       if (!getIntersectingObjects(Wall.class).isEmpty())
         {
-          
+           
         }  
-     
+
+      if (isTouching(World1test.class))
+        { 
+          getWorld().addObject( new Text2(), 200,50);  
+        }
+      if (isTouching(Cointest.class))
+        { 
+          getWorld().addObject( new Text3(), 200,50);  
+        }
+      if (isResetShown == false && isTouching(Cointest.class))
+        { 
+          getWorld().addObject( new Text4(), 200,350);
+          
+          isResetShown = true;
+        }
+
      }
        public Wizard()
     {
