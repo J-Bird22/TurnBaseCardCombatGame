@@ -1,7 +1,7 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class worrld1 here.
+ * Write a description of class World1 here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
@@ -16,7 +16,7 @@ public class World1 extends Actor
     {
       if (Greenfoot.mouseClicked(this))
             {
-                Greenfoot.setWorld(new BattleScreen());        
+                Greenfoot.setWorld(new Battlescreen());        
             }  
     }
 }
