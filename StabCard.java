@@ -41,6 +41,19 @@ public class StabCard extends AttackCard
                 getWorld().removeObject(this);
             }
         }
+        //Enough Energy 
+        //
+        //Code Below This Requires Something That Has Yet To Be Merged
+        //
+        //if (Greenfoot.mouseClicked(this))
+        //{
+        //    if (world.energyBar.energy >= 1)
+        //    {
+        //        world.energyBar.decreaseEnergy(energyCost);
+        //        getWorld().removeObject(this);
+        //    }
+        //}
+
     }
     //Makes The StabCard Able To Use The BattleScreen Class
     //Allowing The Actors To Use The 'healthBar' and 'energyBar'
