@@ -12,7 +12,7 @@ public class FastBlockCard extends BlockCard
     int Block = 2;
     //Energy Cost Of The FASTBLOCK Card
     int energyCost = 1;
-    BattleScreen world;
+    Battlescreen world;
     //Resize The Card
     public FastBlockCard ()
     {
@@ -45,6 +45,6 @@ public class FastBlockCard extends BlockCard
     //Allowing The Actors To Use The 'healthBar' and 'energyBar'
     protected void addedToWorld​(World world)
     {
-        this.world = (BattleScreen)world;
+        this.world = (Battlescreen)world;
     }
 }

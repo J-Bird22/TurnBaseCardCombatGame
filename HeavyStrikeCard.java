@@ -13,7 +13,7 @@ public class HeavyStrikeCard extends AttackCard
     //Energy Cost Of The HEAVYSTRIKE Card
     int energyCost = 2;
     //
-    BattleScreen world;
+    Battlescreen world;
     //Resize The Card
     public HeavyStrikeCard ()
     {
@@ -47,6 +47,6 @@ public class HeavyStrikeCard extends AttackCard
     //Allowing The Actors To Use The 'healthBar' and 'energyBar'
     protected void addedToWorld​(World world)
     {
-        this.world = (BattleScreen)world;
+        this.world = (Battlescreen)world;
     }
 }

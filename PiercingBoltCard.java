@@ -12,7 +12,7 @@ public class PiercingBoltCard extends MagicCard
     int Attack = 2;
     //Energy Cost Of The PIERCINGBOLT Card
     int energyCost = 3;
-    BattleScreen world;
+    Battlescreen world;
     //Resize The Card
     public PiercingBoltCard ()
     {
@@ -45,6 +45,6 @@ public class PiercingBoltCard extends MagicCard
     //Allowing The Actors To Use The 'healthBar' and 'energyBar'
     protected void addedToWorld​(World world)
     {
-        this.world = (BattleScreen)world;
+        this.world = (Battlescreen)world;
     }
 }

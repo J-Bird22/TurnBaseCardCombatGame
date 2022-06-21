@@ -13,7 +13,7 @@ public class StabCard extends AttackCard
     //Energy Cost Of The STAB Card
     int energyCost = 1;
     //
-    BattleScreen world;
+    Battlescreen world;
     //Resize The Card
     public StabCard ()
     {
@@ -46,6 +46,6 @@ public class StabCard extends AttackCard
     //Allowing The Actors To Use The 'healthBar' and 'energyBar'
     protected void addedToWorld​(World world)
     {
-        this.world = (BattleScreen)world;
+        this.world = (Battlescreen)world;
     }
 }

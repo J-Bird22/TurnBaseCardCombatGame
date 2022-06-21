@@ -12,7 +12,7 @@ public class HeavyShieldCard extends BlockCard
     int Block = 6;
     //Energy Cost Of The HEAVYSHIELD Card
     int energyCost = 2;
-    BattleScreen world;
+    Battlescreen world;
     //Resize The Card
     public HeavyShieldCard ()
     {
@@ -45,6 +45,6 @@ public class HeavyShieldCard extends BlockCard
     //Allowing The Actors To Use The 'healthBar' and 'energyBar'
     protected void addedToWorld​(World world)
     {
-        this.world = (BattleScreen)world;
+        this.world = (Battlescreen)world;
     }
 }

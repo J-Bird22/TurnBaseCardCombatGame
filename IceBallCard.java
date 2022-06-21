@@ -6,19 +6,19 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class FireBallCard extends MagicCard
+public class IceBallCard extends MagicCard
 {
     //Attack Damage Of The FIREBALL Card
     int Attack = 5;
     //Energy Cost Of The FIREBALL Card
     int energyCost = 3;
-    BattleScreen world;
+    Battlescreen world;
     //Resize The Card
-    public FireBallCard ()
+    public IceBallCard ()
     {
         this(40, 62);
     }
-    public FireBallCard(int width, int height)
+    public IceBallCard(int width, int height)
     {
         GreenfootImage image = getImage();
         image.scale(width, height);
@@ -45,6 +45,6 @@ public class FireBallCard extends MagicCard
     //Allowing The Actors To Use The 'healthBar' and 'energyBar'
     protected void addedToWorld​(World world)
     {
-        this.world = (BattleScreen)world;
+        this.world = (Battlescreen)world;
     }
 }

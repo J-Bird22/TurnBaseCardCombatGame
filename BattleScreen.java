@@ -2,12 +2,12 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 import java.util.ArrayList;
 
 /**
- * Write a description of class BattleScreen here.
+ * Write a description of class Battlescreen here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class BattleScreen extends World
+public class Battlescreen extends World
 {
     //Allows Energy Bar To Be Used In Other Actors
     Energy energyBar;
@@ -61,10 +61,10 @@ public class BattleScreen extends World
     //The Array Used To Pick 4 Cards Every Turn
     ArrayList<Integer> deck = new ArrayList<Integer>();
     /**
-     * Constructor for objects of class MyWorld.
+     * Constructor for objects of class Battlescreen.
      * 
      */
-    public BattleScreen()
+    public Battlescreen()
     {    
         // World 
         super(600, 400, 1); 
@@ -250,7 +250,7 @@ public class BattleScreen extends World
             {
                 if (f > 0)
                 {
-                    addObject(new FireBallCard(), 50*ii + 30, 365);
+                    addObject(new IceBallCard(), 50*ii + 30, 365);
                     f--;
                 }
                 else ii--;
