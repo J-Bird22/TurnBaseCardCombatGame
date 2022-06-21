@@ -45,7 +45,7 @@ public class HeavyStrikeCard extends AttackCard
     }
     //Makes The HeavyStrikeCard Able To Use The BattleScreen Class
     //Allowing The Actors To Use The 'healthBar' and 'energyBar'
-    protected void addedToWorld​(World world)
+    protected void addedToWorld(World world)
     {
         this.world = (Battlescreen)world;
     }
