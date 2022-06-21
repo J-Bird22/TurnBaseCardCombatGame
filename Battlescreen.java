@@ -95,8 +95,8 @@ public class Battlescreen extends World
     }
     public void act()
     {
-         //Temporary Way For "New Turn"
-        if (Greenfoot.isKeyDown("W"))
+         //Admin Way For "New Turn"
+        if (Greenfoot.isKeyDown("~"))
         {
             newTurn();
             Greenfoot.delay(30);

@@ -41,7 +41,7 @@ public class IceBallCard extends MagicCard
             }
         }
     }
-    //Makes The FireBalldCard Able To Use The BattleScreen Class
+    //Makes The IceBallCard Able To Use The BattleScreen Class
     //Allowing The Actors To Use The 'healthBar' and 'energyBar'
     protected void addedToWorld(World world)
     {

@@ -163,7 +163,7 @@ public class Enemy extends Actor
           //dragon
           maxhp = 50;
           hp = 50;
-          dmg = 7;
+          dmg = 5;
           def = 3;
           armor = 4;
           spec = 2 + Greenfoot.getRandomNumber(4);
@@ -173,7 +173,7 @@ public class Enemy extends Actor
           //beholder
           maxhp = 30;
           hp = 30;
-          dmg = 5;
+          dmg = 4;
           def = 2;
           armor = 6;
           spec = Greenfoot.getRandomNumber(9);
@@ -181,8 +181,8 @@ public class Enemy extends Actor
        else if (boss == 1 && choose == 2)
        {
           //catapult or something
-          maxhp = 70;
-          hp = 70;
+          maxhp = 60;
+          hp = 60;
           dmg = 6;
           def = 0;
           armor = 2;
@@ -228,13 +228,13 @@ public class Enemy extends Actor
        //get enemy class to use its variables to adjust player stats
        Class Player = getClass();
        
-       int eAtkp;//= carddmg;
+       int eAtkp;= carddmg;
        
        
-       //if player uses card, take dmg based on card dmg value
-       //if (Player uses card)
-       //{
-       //   dmgh + carddmg
-       //}
+       if player uses card, take dmg based on card dmg value
+       if (Player uses card)
+       {
+          dmgh = dmgh + carddmg;
+       }
     }
 }
