@@ -38,6 +38,7 @@ public class Wizard extends Actor
         {
            
         }  
+
       if (isTouching(World1test.class))
         { 
           getWorld().addObject( new Text2(), 200,50);  
@@ -52,15 +53,26 @@ public class Wizard extends Actor
           
           isResetShown = true;
         }
+
      }
+       public Wizard()
+    {
+            this(40,40); 
+    }
+    public Wizard(int width, int height)
+    {
+        GreenfootImage image = getImage();
+        image.scale(width, height); 
+        setImage(image);
+    }
     public boolean isTouchingWall()
     {
         boolean isTouchingWall = true; 
         
         int imageWidth = getImage().getWidth();
         int imageHeight = getImage().getHeight(); 
-        if (getOneObjectAtOffset(imageWidth/ -2, imageHeight / 2, Wall.class) != null ||
-        getOneObjectAtOffset(imageWidth/ 2, imageHeight / 2, Wall.class) != null) 
+        if (getOneObjectAtOffset(imageWidth/ -2, imageHeight / 3, Wall.class) != null ||
+        getOneObjectAtOffset(imageWidth/ 2, imageHeight / 3, Wall.class) != null) 
         isTouchingWall = false;         
         return isTouchingWall; 
     }
@@ -70,8 +82,8 @@ public class Wizard extends Actor
         
         int imageWidth = getImage().getWidth();
         int imageHeight = getImage().getHeight(); 
-        if (getOneObjectAtOffset(imageWidth/ -2, imageHeight /-2, Wall.class) !=null ||
-        getOneObjectAtOffset(imageWidth/ 2, imageHeight /-2, Wall.class) !=null) 
+        if (getOneObjectAtOffset(imageWidth/ -2, imageHeight /-3, Wall.class) !=null ||
+        getOneObjectAtOffset(imageWidth/ 2, imageHeight /-3, Wall.class) !=null) 
         BumpHead = false; 
         
         return BumpHead;
@@ -82,8 +94,8 @@ public class Wizard extends Actor
         
         int imageWidth = getImage().getWidth(); 
         int imageHeight = getImage().getHeight();
-        if (getOneObjectAtOffset(imageWidth/ -2 - STEP, imageHeight / -2, Wall.class) !=null ||
-        getOneObjectAtOffset(imageWidth/ -2 - STEP, imageHeight / 2 -1, Wall.class) !=null)
+        if (getOneObjectAtOffset(imageWidth/ -2 - STEP, imageHeight / -3, Wall.class) !=null ||
+        getOneObjectAtOffset(imageWidth/ -2 - STEP, imageHeight / 3, Wall.class) !=null)
         canMoveLeft = false; 
         
         return canMoveLeft;     
@@ -94,8 +106,8 @@ public class Wizard extends Actor
         
         int imageWidth = getImage().getWidth();
         int imageHeight = getImage().getHeight(); 
-        if (getOneObjectAtOffset(imageWidth/ 2 +STEP, imageHeight / -2, Wall.class) !=null ||
-        getOneObjectAtOffset(imageWidth/ 2 +STEP, imageHeight / 2 -1, Wall.class) !=null)
+        if (getOneObjectAtOffset(imageWidth/ 2 +STEP, imageHeight / -3, Wall.class) !=null ||
+        getOneObjectAtOffset(imageWidth/ 2 +STEP, imageHeight /  3, Wall.class) !=null)
         canMoveRight = false; 
         return canMoveRight;
     }
