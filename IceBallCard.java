@@ -16,7 +16,7 @@ public class IceBallCard extends MagicCard
     //Resize The Card
     public IceBallCard ()
     {
-        this(40, 62);
+        this(60, 80);
     }
     public IceBallCard(int width, int height)
     {

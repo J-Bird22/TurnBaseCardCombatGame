@@ -16,7 +16,7 @@ public class PiercingBoltCard extends MagicCard
     //Resize The Card
     public PiercingBoltCard ()
     {
-        this(40, 62);
+        this(60, 80);
     }
     public PiercingBoltCard(int width, int height)
     {

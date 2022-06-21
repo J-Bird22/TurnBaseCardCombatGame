@@ -17,7 +17,7 @@ public class HeavyStrikeCard extends AttackCard
     //Resize The Card
     public HeavyStrikeCard ()
     {
-        this(40, 62);
+        this(60, 80);
     }
     public HeavyStrikeCard(int width, int height)
     {
