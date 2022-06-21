@@ -1,25 +1,24 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class StabCard here.
+ * Write a description of class HeavyShieldCard here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class StabCard extends AttackCard
+public class HeavyShieldCard extends BlockCard
 {
-    //Attack Damage Of The STAB Card
-    int Attack = 2;
-    //Energy Cost Of The STAB Card
-    int energyCost = 1;
-    //
+    //Shield Amount Of The HEAVYSHIELD Card
+    int Block = 6;
+    //Energy Cost Of The HEAVYSHIELD Card
+    int energyCost = 2;
     Battlescreen world;
     //Resize The Card
-    public StabCard ()
+    public HeavyShieldCard ()
     {
         this(40, 62);
     }
-    public StabCard(int width, int height)
+    public HeavyShieldCard(int width, int height)
     {
         GreenfootImage image = getImage();
         image.scale(width, height);
@@ -32,30 +31,17 @@ public class StabCard extends AttackCard
     public void act()
     {
         //Allowing The Player To Use The Card ONLY If They've 
-        //Enough Energy - - - - - - - - - -
+        //Enough Energy 
         if (Greenfoot.mouseClicked(this))
         {
-            if (world.energyBar.energy >= 1)
+            if (world.energyBar.energy >= energyCost)
             {
                 world.energyBar.decreaseEnergy(energyCost);
                 getWorld().removeObject(this);
             }
         }
-        //Enough Energy 
-        //
-        //Code Below This Requires Something That Has Yet To Be Merged
-        //
-        //if (Greenfoot.mouseClicked(this))
-        //{
-        //    if (world.energyBar.energy >= 1)
-        //    {
-        //        world.energyBar.decreaseEnergy(energyCost);
-        //        getWorld().removeObject(this);
-        //    }
-        //}
-
     }
-    //Makes The StabCard Able To Use The BattleScreen Class
+    //Makes The ShieldCard Able To Use The BattleScreen Class
     //Allowing The Actors To Use The 'healthBar' and 'energyBar'
     protected void addedToWorld​(World world)
     {
