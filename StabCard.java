@@ -17,7 +17,7 @@ public class StabCard extends AttackCard
     //Resize The Card
     public StabCard ()
     {
-        this(40, 62);
+        this(60, 80);
     }
     public StabCard(int width, int height)
     {

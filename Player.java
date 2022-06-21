@@ -7,6 +7,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Player extends Actor
 {
+    //A Filler Variable To Only Spawn Cards Once Per Turn
+    int Once = 1;
     //the player max hp
     int maxhpP = 15;
     
@@ -68,7 +70,11 @@ public class Player extends Actor
        
        setLocation(450,200);
        //(cards stuff)
-       
+        if (Once == 1)
+       {
+           ((Battlescreen)getWorld()).newTurn();
+           Once = 0;
+       }
        //cards show up
        
        //take your turn
@@ -90,6 +96,7 @@ public class Player extends Actor
              getWorld().removeObject(turnUnblocker);
              getWorld().addObject(turnUnblocker, 150,200);
           }
+          Once = 1;
        }
     }
     
