@@ -14,7 +14,6 @@ public class Text extends Actor
      */
     public void act() 
     {
-      Greenfoot.delay(10);
-      getWorld().removeObject(this);
+      
     }    
 }

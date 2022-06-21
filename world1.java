@@ -16,7 +16,7 @@ public class World1 extends Actor
     {
       if (Greenfoot.mouseClicked(this))
             {
-                Greenfoot.setWorld(new BattleScreen());        
+                Greenfoot.setWorld(new Battlescreen());        
             }  
     }
 }

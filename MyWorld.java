@@ -132,15 +132,7 @@ public class MyWorld extends World
         Wall wall5 = new Wall(10, 100);
         addObject(wall5,432,518);
         wall5.setLocation(200,201);
-        Wall wall6 = new Wall(100, 10);
-        addObject(wall6,439,296);
-        wall6.setLocation(421,524);
-        Wall wall7 = new Wall(300, 10);
-        addObject(wall7,506,583);
-        wall7.setLocation(498,577);
-        Wall wall8 = new Wall(100, 10);
-        addObject(wall8,582,485);
-        wall8.setLocation(541,521);
+
         Wall wall9 = new Wall(300, 10);
         addObject(wall9,653,481);
         wall9.setLocation(285,120);
@@ -148,39 +140,19 @@ public class MyWorld extends World
         Wall wall10 = new Wall(300, 10);
         addObject(wall10,439,73);
         wall10.setLocation(425,81);
-        Wall wall11 = new Wall(100, 10);
-        addObject(wall11,626,76);
-        wall11.setLocation(646,150);
-        Wall wall12 = new Wall(300, 10);
-        addObject(wall12,345,199);
-        wall12.setLocation(411,152);
+
         Wall wall13 = new Wall(20, 10);
         addObject(wall13,234,160);
         wall13.setLocation(230,153);
-        Wall wall14 = new Wall(50, 10);
-        addObject(wall14,628,78);
-        wall14.setLocation(629,83);
-        Wall wall15 = new Wall(50, 10);
-        addObject(wall15,679,55);
-        wall15.setLocation(690,60);
-        Wall wall16 = new Wall(50, 10);
-        addObject(wall16,740,128);
-        wall16.setLocation(727,118);
+
         Wall wall17 = new Wall(100, 10);
         addObject(wall17,401,311);
         wall17.setLocation(262,252);
-        Wall wall18 = new Wall(200, 10);
-        addObject(wall18,427,329);
-        wall18.setLocation(709,376);
+
         Wall wall19 = new Wall(150, 10);
         addObject(wall19,402,322);
         wall19.setLocation(451,324);
-        Wall wall20 = new Wall(180, 10);
-        addObject(wall20,676,452);
-        wall20.setLocation(694,450);
-        Wall wall21 = new Wall(150, 10);
-        addObject(wall21,237,340);
-        wall21.setLocation(234,318);
+
         Wall wall22 = new Wall(80, 10);
         addObject(wall22,763,574);
         wall22.setLocation(780,574);
@@ -190,24 +162,15 @@ public class MyWorld extends World
         Wall wall24 = new Wall(150, 10);
         addObject(wall24,689,511);
         wall24.setLocation(690,519);
-        Wall wall25 = new Wall(150, 10);
-        addObject(wall25,754,611);
-        wall25.setLocation(787,620);
+
         Wall wall26 = new Wall(10, 100);
         addObject(wall26,831,477);
         wall26.setLocation(826,521);
-        Wall wall27 = new Wall(10, 200);
-        addObject(wall27,816,409);
-        removeObject(wall27);
-        Wall wall28 = new Wall(10, 150);
-        addObject(wall28,818,350);
-        wall28.setLocation(825,383);
+
         Wall wall29 = new Wall(10, 100);
         addObject(wall29,520,396);
         wall29.setLocation(521,468);
-        Wall wall30 = new Wall(10, 80);
-        addObject(wall30,530,381);
-        wall30.setLocation(519,375);
+
         Wall wall31 = new Wall(10, 100);
         addObject(wall31,257,390);
         wall31.setLocation(289,385);
@@ -239,5 +202,46 @@ public class MyWorld extends World
         Wall wall40 = new Wall(50, 10);
         addObject(wall40,575,449);
         wall40.setLocation(574,444);
+
+        Wall wall41 = new Wall(10, 100);
+        addObject(wall41,829,405);
+        wall41.setLocation(826,398);
+        Wall wall27 = new Wall(200, 10);
+        addObject(wall27,473,592);
+        wall27.setLocation(381,584);
+        removeObject(wall3);
+        Wall wall28 = new Wall(5, 300);
+        addObject(wall28,889,503);
+        wall28.setLocation(887,451);
+        Wall wall42 = new Wall(100, 5);
+        addObject(wall,24205,334);
+        Wall wall43 = new Wall(100, 5);
+        addObject(wall43,221,324);
+        wall43.setLocation(218,327);
+        Wall wall30 = new Wall(300, 5);
+        addObject(wall30,377,167);
+        wall30.setLocation(379,163);
+        Wall wall44 = new Wall(100, 5);
+        addObject(wall44,579,587);
+        Wall wall45 = new Wall(100, 5);
+        addObject(wall45,740,470);
+        wall45.setLocation(679,158);
+        Wall wall46 = new Wall(5, 80);
+        addObject(wall46,760,476);
+        wall46.setLocation(760,473);
+        Wall wall47 = new Wall(100, 5);
+        addObject(wall47,691,364);
+        wall47.setLocation(722,371);
+        Wall wall48 = new Wall(80, 5);
+        addObject(wall48,575,510);
+        wall48.setLocation(572,512);
+        Wall wall49 = new Wall(50, 5);
+        addObject(wall49,629,70);
+        wall49.setLocation(630,85);
+        Wall wall50 = new Wall(100, 5);
+        addObject(wall50,677,444);
+        Wall wall51 = new Wall(100, 3);
+        addObject(wall51,407,522);
+        wall51.setLocation(421,521);
     }
 }
