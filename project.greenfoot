@@ -1,5 +1,7 @@
 #Greenfoot project file
 
+class.BlackLine.image=Line.png
+class.Buy.image=Buy.png
 class.Coin.image=coin.png
 class.EndPath1.image=path.png
 class.EndPath2.image=path.png
@@ -11,20 +13,23 @@ class.Path2.image=path2.png
 class.Text.image=Text.png
 class.Wall.image=wall\ (1).png
 class.Wizard.image=orb\ (1).png
-
 class.AttackCard.image=BasicCard-1.png.png
 class.Card.image=BasicCard-1.png.png
-
 class.Energy.image=Energy3-1.png
 class.FastBlockCard.image=BasicCard-1.png_Copy_Copy02.png
 class.HeavyShieldCard.image=BasicCard-1.png_Copy.png
 class.HeavyStrikeCard.image=HeavyStrikeCard.png
 class.IceBallCard.image=IceBoltCard.png
-
+class.Path.image=path.png
+class.Path2.image=path2.png
+class.ShopMenu.image=shoptMenu.png
+class.Shopbutton.image=Shopbutton\ (2).png
+class.StoreKeeper.image=store\ keeper.png
+class.Text.image=Text.png
+class.Wall.image=wall\ (2).png
+class.Wizard.image=orb.png
+class.World1.image=battle\ .png
+class.shop.image=background\ (1).png
 class.PiercingBoltCard.image=PiercingBoltCard.png
 class.Player.image=orb.png
 class.StabCard.image=StabCard.png
-
-
-
-class.World1.image=battle\ .png
