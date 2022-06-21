@@ -109,29 +109,28 @@ public class Player extends Actor
     {
        //use enemy class variables to adjust player stats
        
-       //dmg;
-       //int spedmg = world.dmg.enemy + world.spec.enemy;
-       //action;
-       //cldwn
+       
+       int spedmg = world.dmg.enemy + world.spec.enemy;
+       
        
        //if enemy attacks, take dmg according to dmg value
        
        
-       //if (world.action.enemy == 0)
+       if (world.action.enemy == 0)
        {
-       //   hp = hp - (world.dmg.enemy/2);
+          hp = hp - (world.dmg.enemy/2);
        }
-       //else if (world.action.enemy == 2 && world.cldwn.enemy > 3)
+       else if (world.action.enemy == 2 && world.cldwn.enemy > 3)
        {
-       //   hp = hp - (spedmg/2);
+          hp = hp - (spedmg/2);
        }
-       //else if (world.action.enemy == 2)
+       else if (world.action.enemy == 2)
        {
-       //   hp = hp - (world.dmg.enemy/2);
+          hp = hp - (world.dmg.enemy/2);
        }
-       //else if (world.action.enemy == 1)
+       else if (world.action.enemy == 1)
        {
-       //   hp = hp;
+          hp = hp;
        }
     }
 }
