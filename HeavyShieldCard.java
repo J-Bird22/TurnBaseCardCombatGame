@@ -9,7 +9,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class HeavyShieldCard extends BlockCard
 {
     //Shield Amount Of The HEAVYSHIELD Card
-    int Block = 6;
+    int block = 6;
     //Energy Cost Of The HEAVYSHIELD Card
     int energyCost = 2;
     Battlescreen world;

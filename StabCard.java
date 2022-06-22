@@ -9,7 +9,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class StabCard extends AttackCard
 {
     //Attack Damage Of The STAB Card
-    int Attack = 2;
+    int attack = 2;
     //Energy Cost Of The STAB Card
     int energyCost = 1;
     //

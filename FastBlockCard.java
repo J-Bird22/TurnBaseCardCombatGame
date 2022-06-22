@@ -9,7 +9,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class FastBlockCard extends BlockCard
 {
     //Shield Amount Of The FASTBLOCK Card
-    int Block = 2;
+    int block = 2;
     //Energy Cost Of The FASTBLOCK Card
     int energyCost = 1;
     Battlescreen world;

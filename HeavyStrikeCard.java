@@ -9,7 +9,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class HeavyStrikeCard extends AttackCard
 {
     //Attack Damage Of The HEAVYSTRIKE Card
-    int Attack = 4;
+    int attack = 4;
     //Energy Cost Of The HEAVYSTRIKE Card
     int energyCost = 2;
     //
