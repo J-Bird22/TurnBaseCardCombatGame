@@ -48,6 +48,8 @@ public class Enemy extends Actor
     
     //determines if the enemy is a bossfight or not (will be based off of another variable later)
     int boss = 0;
+    
+    
     /** - Jesse
      * The Images Below I Changed Since Somewhere We Lost The Placeholder Images
      * And Im Not Sure If They Need  A Specefic Look But I Gave Them An Image To Run
@@ -231,7 +233,11 @@ public class Enemy extends Actor
        int eAtkp = carddmg;
        
        
-       if player uses card, take dmg based on card dmg value
+       //if player uses card, take dmg based on card dmg value
+       /** -lyrin 
+        *  a card needs to be detected to make the enemy take damage.
+        *  I'm not sure where or how you've created the detection method so I'll leave this to you
+        */
        if (Player uses card);
        {
           dmgh = dmgh + carddmg;
@@ -244,8 +250,7 @@ public class Enemy extends Actor
        }
        if (isTouching (mapback.class))
         {
-           gotomap = 2;
+           setWorld MyWorld;
         }
     }
-    
 }
