@@ -236,5 +236,11 @@ public class Enemy extends Actor
        {
           dmgh = dmgh + carddmg;
        }
+       if (hp < 1)
+       {
+          System.out.println("enemy has been defeated");
+          System.out.println("You've won the battle!");
+          setlocation(600,400);
+       }
     }
 }
