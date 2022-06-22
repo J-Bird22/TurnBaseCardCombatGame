@@ -53,7 +53,10 @@ public class Wizard extends Actor
           
           isResetShown = true;
         }
-
+       if (isTouching(Coin.class))
+        { 
+          Greenfoot.setWorld(new Shop());         
+        }
      }
        public Wizard()
     {
