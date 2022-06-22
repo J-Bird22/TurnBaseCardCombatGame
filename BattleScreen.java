@@ -288,4 +288,11 @@ public class Battlescreen extends World
         }
         energyBar.energy = 3;
     }
+    public void backtomap
+    {
+       if (gotomap == 2)
+       {
+          setWorld MyWorld;
+       }
+    }
 }
