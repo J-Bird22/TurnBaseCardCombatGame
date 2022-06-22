@@ -242,5 +242,10 @@ public class Enemy extends Actor
           System.out.println("You've won the battle!");
           setlocation(600,400);
        }
+       if (isTouching (mapback.class))
+        {
+           gotomap = 2;
+        }
     }
+    
 }
