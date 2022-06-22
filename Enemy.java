@@ -228,11 +228,11 @@ public class Enemy extends Actor
        //get enemy class to use its variables to adjust player stats
        Class Player = getClass();
        
-       int eAtkp;= carddmg;
+       int eAtkp = carddmg;
        
        
        if player uses card, take dmg based on card dmg value
-       if (Player uses card)
+       if (Player uses card);
        {
           dmgh = dmgh + carddmg;
        }

@@ -39,6 +39,7 @@ public class HeavyStrikeCard extends AttackCard
             if (world.energyBar.energy >= 1)
             {
                 world.energyBar.decreaseEnergy(energyCost);
+                world.player.cardDmg(attack);
                 getWorld().removeObject(this);
             }
         }

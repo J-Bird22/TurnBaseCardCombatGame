@@ -9,6 +9,8 @@ public class Player extends Actor
 {
     //A Filler Variable To Only Spawn Cards Once Per Turn
     int Once = 1;
+    //Card Attack
+    int cardAttack = 0;
     //the player max hp
     int maxhpP = 15;
     
@@ -132,5 +134,9 @@ public class Player extends Actor
        {
           hp = hp;
        }
+    }
+    public void cardDmg(int amount)
+    {
+        cardAttack = amount;
     }
 }

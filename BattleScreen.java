@@ -10,6 +10,7 @@ public class Battlescreen extends World
 {
     //Allows Energy Bar To Be Used In Other Actors
     Energy energyBar;
+    Player player;
     //Card Variables 
     //"Letter"1 is a variable that's the total amount of a card
     int a1 = 0;
