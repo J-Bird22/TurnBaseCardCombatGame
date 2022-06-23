@@ -9,7 +9,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class IceBallCard extends MagicCard
 {
     //Attack Damage Of The FIREBALL Card
-    int attack = 5;
+    int attack = 7;
     //Energy Cost Of The FIREBALL Card
     int energyCost = 3;
     Battlescreen world;

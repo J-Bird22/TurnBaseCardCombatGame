@@ -9,9 +9,9 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class PiercingBoltCard extends MagicCard
 {
     //Attack Damage Of The PIERCINGBOLT Card
-    int attack = 2;
+    int attack = 4;
     //Energy Cost Of The PIERCINGBOLT Card
-    int energyCost = 3;
+    int energyCost = 1;
     Battlescreen world;
     //Resize The Card
     public PiercingBoltCard ()

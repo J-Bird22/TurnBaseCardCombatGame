@@ -111,28 +111,28 @@ public class Player extends Actor
     {
        //use enemy class variables to adjust player stats
        
-       
-       int spedmg = world.dmg.enemy + world.spec.enemy;
-       
+       //int spedmg = world.enemy.dmg + world.enemy.spec;
        
        //if enemy attacks, take dmg according to dmg value
-       
-       
-       if (world.action.enemy == 0)
+       //if (world.enemy.action == 0)
        {
-          hp = hp - (world.dmg.enemy/2);
+          //hp = hp - (world.enemy.dmg/2);
        }
-       else if (world.action.enemy == 2 && world.cldwn.enemy > 3)
+       //else if (world.enemy.action == 2 && world.enemy.cldwn > 3)
        {
-          hp = hp - (spedmg/2);
+          //hp = hp - (spedmg/2);
        }
-       else if (world.action.enemy == 2)
+       //else if (world.enemy.action == 2)
        {
-          hp = hp - (world.dmg.enemy/2);
+          //hp = hp - (world.enemy.dmg/2);
        }
-       else if (world.action.enemy == 1)
+       //else if (world.enemy.action == 1)
        {
-          hp = hp;
+          //hp = hp;
+       }
+       if (hp < 1)
+       {
+          //setworld MainMenu;
        }
     }
     public void cardDmg(int amount)

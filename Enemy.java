@@ -32,7 +32,7 @@ public class Enemy extends Actor
     int armor;
     
     //enemy current hp
-    int hp = maxhp - dmgh;
+    int hp = maxhp;
     
     //what the enemy is doing on their turn
     int action = Greenfoot.getRandomNumber(3);
@@ -58,10 +58,16 @@ public class Enemy extends Actor
     GreenfootImage placeholder;
     GreenfootImage placehold;
     GreenfootImage holdplace;
+    GreenfootImage catapult;
+    GreenfootImage dragon;
+    GreenfootImage beholder;
     {
-       placeholder = new GreenfootImage("images/Filler1.png");
-       placehold = new GreenfootImage("images/Filler2.png");
-       holdplace = new GreenfootImage("images/Filler3.png");
+       placeholder = new GreenfootImage("images/placeholder.png");
+       placehold = new GreenfootImage("images/placehold.png");
+       holdplace = new GreenfootImage("images/holdplace.png");
+       catapult = new GreenfootImage("images/catapult.png");
+       dragon = new GreenfootImage("images/dragon.png");
+       beholder = new GreenfootImage("images/beholder.png");
     }
     
     /**
@@ -163,6 +169,7 @@ public class Enemy extends Actor
        if (boss == 1 && choose == 0)
        {
           //dragon
+          setImage(dragon);
           maxhp = 50;
           hp = 50;
           dmg = 5;
@@ -173,6 +180,7 @@ public class Enemy extends Actor
        else if (boss == 1 && choose == 1)
        {
           //beholder
+          setImage(beholder);
           maxhp = 30;
           hp = 30;
           dmg = 4;
@@ -182,7 +190,8 @@ public class Enemy extends Actor
        }
        else if (boss == 1 && choose == 2)
        {
-          //catapult or something
+          //catapult
+          setImage(catapult);
           maxhp = 60;
           hp = 60;
           dmg = 6;
@@ -227,30 +236,26 @@ public class Enemy extends Actor
     
     public void takedmg()
     {
-       //get enemy class to use its variables to adjust player stats
-       Class Player = getClass();
-       
-       int eAtkp = carddmg;
-       
+       //int eAtkp = carddmg;
        
        //if player uses card, take dmg based on card dmg value
        /** -lyrin 
         *  a card needs to be detected to make the enemy take damage.
         *  I'm not sure where or how you've created the detection method so I'll leave this to you
         */
-       if (Player uses card);
+       //if (Player uses card);
        {
-          dmgh = dmgh + carddmg;
+          //hp = hp - carddmg;
        }
        if (hp < 1)
        {
-          System.out.println("enemy has been defeated");
-          System.out.println("You've won the battle!");
-          setlocation(600,400);
+          //System.out.println("enemy has been defeated");
+          //System.out.println("You've won the battle!");
+          //setlocation(600,400);
        }
-       if (isTouching (mapback.class))
+       if (isTouching (Mapback.class))
         {
-           setWorld MyWorld;
+           //setWorld MyWorld;
         }
     }
 }
